@@ -34,7 +34,8 @@ public class Board extends JPanel
  public Board() {
       initBoard();
  }
- 
+//NOTE! The png file must be created inside of folder named 'resources' that resides in the src folder of the package, at which
+//the image must have a size of at least 3KB with small enough dimensions that will fit into the screen//
  private void loadImage() {
     ImageIcon ii = new ImageIcon("src/resources/star.png");
     star = ii.getImage();
@@ -74,7 +75,7 @@ public class Board extends JPanel
 //In the drawStar() method, we draw the image on the windows with the usage of the
 //drawImage() method. The Toolkit.getDefaultToolkit().sync() synchronises the painting on systems that buffer graphic systems
 //Without this line, the animation might not be smooth on Linux//
-      
+   
       @Override
       public void actionPerformed(ActionEvent e) {
           x += 1;
