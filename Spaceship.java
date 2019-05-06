@@ -34,10 +34,11 @@ private void loadImage() {
 
 public void move() {
     x += dx;
-    y += dy;
-    
+    y += dy;    
 }
-
+//The move() method changes the coordinates of the sprite//
+//These x and y values are used in the paintComponent() method to draw the image of the sprite//
+ 
 public int getX() {
   return x;
 }
@@ -60,7 +61,9 @@ public void keyPressed(KeyEvent e) {
      if (key == KeyEvent.VK_LEFT) {
          dx = -2;
      }
-     
+//When we release the left cursor key, we set the dx variable to zero.//
+//The spacecraft will stop moving//                          
+                            
      if (key == KeyEvent.VK_RIGHT) {
         dx = -2;
      }
@@ -94,7 +97,8 @@ public void keyPressed(KeyEvent e) {
         }
     }
 }
-            
+//This class represents a spaceship. In this class we keep the image of the sprite and the coordinates of the sprite//
+//The keyPressed() and keyReleased() methods control whether the sprite is moving//                            
 
    
       
